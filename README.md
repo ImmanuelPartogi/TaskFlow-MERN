@@ -1,8 +1,8 @@
 # TaskFlow - Aplikasi Manajemen Tugas Kolaboratif
 
-![TaskFlow Banner](https://via.placeholder.com/1200x300/0ea5e9/ffffff?text=TaskFlow+MERN+Stack)
+![TaskFlow Banner](![Image]()
+[<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/66843d46-7e66-40ca-85bd-c34ab48b101f)" />](https://github.com/user-attachments/assets/66843d46-7e66-40ca-85bd-c34ab48b101f))
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-8.16.3-47A248?logo=mongodb)](https://www.mongodb.com/)
