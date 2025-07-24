@@ -1,4 +1,4 @@
-# TaskFlow - Aplikasi Manajemen Tugas Kolaboratif
+# TaskFlow - Collaborative Task Management Application
 
 ![Image](https://github.com/user-attachments/assets/66843d46-7e66-40ca-85bd-c34ab48b101f)
 
@@ -8,41 +8,41 @@
 [![Express](https://img.shields.io/badge/Express-5.1.0-000000?logo=express)](https://expressjs.com/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.11-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-## 📝 Deskripsi
+## 📝 Description
 
-TaskFlow adalah aplikasi manajemen tugas kolaboratif yang memungkinkan tim untuk mengelola proyek dan tugas secara efisien. Aplikasi ini dibangun dengan MERN Stack (MongoDB, Express.js, React.js, Node.js) dan menggunakan TailwindCSS untuk styling.
+TaskFlow is a collaborative task management application that enables teams to manage projects and tasks efficiently. This application is built with the MERN Stack (MongoDB, Express.js, React.js, Node.js) and uses TailwindCSS for styling.
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-- 🔐 **Autentikasi Pengguna**: Sistem login dan registrasi aman dengan JWT
-- 🖱️ **Antarmuka Drag-and-Drop**: Kelola tugas dengan mudah menggunakan antarmuka kanban intuitif
-- 🔔 **Notifikasi Real-time**: Dapatkan pembaruan instan menggunakan WebSockets
-- 📊 **Dashboard Interaktif**: Pantau kemajuan proyek dengan visualisasi grafik
-- 👥 **Manajemen Tim**: Undang anggota tim dan tetapkan tugas
-- 🏷️ **Kategori Prioritas**: Atur tugas berdasarkan prioritas (rendah, sedang, tinggi)
-- 📱 **Responsif**: Tampilan yang optimal di semua perangkat
+- 🔐 **User Authentication**: Secure login and registration system with JWT
+- 🖱️ **Drag-and-Drop Interface**: Easily manage tasks using an intuitive kanban interface
+- 🔔 **Real-time Notifications**: Get instant updates using WebSockets
+- 📊 **Interactive Dashboard**: Monitor project progress with graph visualizations
+- 👥 **Team Management**: Invite team members and assign tasks
+- 🏷️ **Priority Categories**: Organize tasks based on priority (low, medium, high)
+- 📱 **Responsive**: Optimal display on all devices
 
-## 🛠️ Teknologi
+## 🛠️ Technology
 
 ### Backend
-- **Node.js** - Runtime JavaScript
-- **Express.js** - Framework web
-- **MongoDB** - Database NoSQL
-- **Mongoose** - ODM untuk MongoDB
-- **JWT** - Autentikasi token
-- **Socket.IO** - Komunikasi real-time
+- **Node.js** - JavaScript Runtime
+- **Express.js** - Web Framework
+- **MongoDB** - NoSQL Database
+- **Mongoose** - ODM for MongoDB
+- **JWT** - Token Authentication
+- **Socket.IO** - Real-time Communication
 
 ### Frontend
-- **React** - Library UI
-- **React Router** - Navigasi
+- **React** - UI Library
+- **React Router** - Navigation
 - **TailwindCSS** - Styling
-- **Axios** - HTTP client
-- **DND Kit** - Fungsionalitas drag-and-drop
-- **Socket.IO Client** - Koneksi real-time dengan server
+- **Axios** - HTTP Client
+- **DND Kit** - Drag-and-drop Functionality
+- **Socket.IO Client** - Real-time Connection with Server
 
-## 🗄️ Struktur Database
+## 🗄️ Database Structure
 
-Aplikasi menggunakan MongoDB dengan 3 skema utama:
+The application uses MongoDB with 3 main schemas:
 
 ### User Schema
 
@@ -149,43 +149,43 @@ const TaskSchema = new mongoose.Schema({
 });
 ```
 
-### Relasi Database
+### Database Relations
 
-- User memiliki banyak Project (one-to-many)
-- Project memiliki banyak Task (one-to-many)
-- Project memiliki banyak User sebagai member (many-to-many)
-- Task dimiliki oleh satu Project (many-to-one)
-- Task dibuat oleh satu User (many-to-one)
-- Task dapat ditugaskan ke satu User (many-to-one)
+- User has many Projects (one-to-many)
+- Project has many Tasks (one-to-many)
+- Project has many Users as members (many-to-many)
+- Task belongs to one Project (many-to-one)
+- Task is created by one User (many-to-one)
+- Task can be assigned to one User (many-to-one)
 
-## 🏗️ Arsitektur Aplikasi
+## 🏗️ Application Architecture
 
 ### Backend
 
 ```
 server/
 ├── config/
-│   ├── db.js         # Koneksi MongoDB
-│   └── default.js    # Konfigurasi aplikasi
+│   ├── db.js         # MongoDB Connection
+│   └── default.js    # Application Configuration
 ├── models/
-│   ├── User.js       # Skema user
-│   ├── Project.js    # Skema project
-│   └── Task.js       # Skema task
+│   ├── User.js       # User Schema
+│   ├── Project.js    # Project Schema
+│   └── Task.js       # Task Schema
 ├── middleware/
-│   └── auth.js       # Middleware autentikasi JWT
+│   └── auth.js       # JWT Authentication Middleware
 ├── controllers/
-│   ├── authController.js    # Handler autentikasi
-│   ├── userController.js    # Handler user
-│   ├── projectController.js # Handler project
-│   └── taskController.js    # Handler task
+│   ├── authController.js    # Authentication Handler
+│   ├── userController.js    # User Handler
+│   ├── projectController.js # Project Handler
+│   └── taskController.js    # Task Handler
 ├── routes/
-│   ├── auth.js       # Endpoint autentikasi
-│   ├── users.js      # Endpoint user
-│   ├── projects.js   # Endpoint project
-│   └── tasks.js      # Endpoint task
+│   ├── auth.js       # Authentication Endpoint
+│   ├── users.js      # User Endpoint
+│   ├── projects.js   # Project Endpoint
+│   └── tasks.js      # Task Endpoint
 ├── utils/
-│   └── socketEvents.js # Konfigurasi Socket.IO
-└── server.js         # Entry point aplikasi
+│   └── socketEvents.js # Socket.IO Configuration
+└── server.js         # Application Entry Point
 ```
 
 ### Frontend
@@ -194,99 +194,99 @@ server/
 client/
 ├── src/
 │   ├── services/
-│   │   ├── api.js          # Konfigurasi Axios
-│   │   ├── authService.js  # Layanan autentikasi
-│   │   ├── projectService.js # Layanan project
-│   │   └── taskService.js  # Layanan task
+│   │   ├── api.js          # Axios Configuration
+│   │   ├── authService.js  # Authentication Service
+│   │   ├── projectService.js # Project Service
+│   │   └── taskService.js  # Task Service
 │   ├── contexts/
-│   │   ├── AuthContext.js  # Context autentikasi
-│   │   └── NotificationContext.js # Context notifikasi
+│   │   ├── AuthContext.js  # Authentication Context
+│   │   └── NotificationContext.js # Notification Context
 │   ├── components/
 │   │   ├── Auth/
-│   │   │   ├── Login.js    # Form login
-│   │   │   └── Register.js # Form registrasi
+│   │   │   ├── Login.js    # Login Form
+│   │   │   └── Register.js # Registration Form
 │   │   ├── Dashboard/
-│   │   │   ├── Dashboard.js # Halaman dashboard
-│   │   │   └── ProjectProgress.js # Grafik progress
+│   │   │   ├── Dashboard.js # Dashboard Page
+│   │   │   └── ProjectProgress.js # Progress Graph
 │   │   ├── Projects/
-│   │   │   ├── ProjectList.js # Daftar project
-│   │   │   ├── ProjectForm.js # Form project
-│   │   │   └── ProjectDetail.js # Detail project
+│   │   │   ├── ProjectList.js # Project List
+│   │   │   ├── ProjectForm.js # Project Form
+│   │   │   └── ProjectDetail.js # Project Detail
 │   │   ├── Tasks/
-│   │   │   ├── TaskBoard.js # Papan kanban
-│   │   │   ├── TaskCard.js  # Komponen task
-│   │   │   └── TaskForm.js  # Form task
+│   │   │   ├── TaskBoard.js # Kanban Board
+│   │   │   ├── TaskCard.js  # Task Component
+│   │   │   └── TaskForm.js  # Task Form
 │   │   └── Layout/
-│   │       ├── Header.js    # Header aplikasi
-│   │       ├── Sidebar.js   # Sidebar navigasi
-│   │       └── Notification.js # Komponen notifikasi
-│   └── App.js              # Komponen utama
+│   │       ├── Header.js    # Application Header
+│   │       ├── Sidebar.js   # Navigation Sidebar
+│   │       └── Notification.js # Notification Component
+│   └── App.js              # Main Component
 ```
 
-## 🚀 Cara Menjalankan
+## 🚀 How to Run
 
-### Prasyarat
+### Prerequisites
 
-- Node.js (versi 18.x atau lebih baru)
-- MongoDB (lokal atau Atlas)
-- npm atau yarn
+- Node.js (version 18.x or newer)
+- MongoDB (local or Atlas)
+- npm or yarn
 
-### Instalasi
+### Installation
 
-1. Clone repositori ini
+1. Clone this repository
 
 ```bash
 git clone https://github.com/ImmanuelPartogi/taskflow-mern.git
 cd taskflow-mern
 ```
 
-2. Instal dependensi server
+2. Install server dependencies
 
 ```bash
 cd server
 npm install
 ```
 
-3. Buat file config untuk koneksi MongoDB
+3. Create config file for MongoDB connection
 
 ```bash
-# Buat file config/default.js
+# Create config/default.js file
 module.exports = {
   mongoURI: 'mongodb://localhost:27017/taskflow',
   jwtSecret: 'your_jwt_secret'
 };
 ```
 
-4. Instal dependensi client
+4. Install client dependencies
 
 ```bash
 cd ../client
 npm install
 ```
 
-### Menjalankan Aplikasi
+### Running the Application
 
-1. Jalankan server (dari folder server)
-
-```bash
-npm run dev
-```
-
-2. Jalankan client (dari folder client)
+1. Run the server (from server folder)
 
 ```bash
 npm run dev
 ```
 
-3. Buka aplikasi di browser: `http://localhost:5173`
+2. Run the client (from client folder)
 
-## 📸 Screenshot
+```bash
+npm run dev
+```
+
+3. Open the application in browser: `http://localhost:5173`
+
+## 📸 Screenshots
 
 ![Dashboard](https://via.placeholder.com/800x450/0ea5e9/ffffff?text=Dashboard)
 ![Task Board](https://via.placeholder.com/800x450/0ea5e9/ffffff?text=Task+Board)
 ![Project Detail](https://via.placeholder.com/800x450/0ea5e9/ffffff?text=Project+Detail)
 
-## 👨‍💻 Pembuat
+## 👨‍💻 Creator
 
 - **Immanuel Partogi Pardede** - [GitHub](https://github.com/ImmanuelPartogi)
 
