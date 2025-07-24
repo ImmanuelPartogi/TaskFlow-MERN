@@ -1,6 +1,6 @@
 # TaskFlow - Aplikasi Manajemen Tugas Kolaboratif
 
-![TaskFlow Banner](![Image]()
+![TaskFlow Banner]
 [<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/66843d46-7e66-40ca-85bd-c34ab48b101f)" />](https://github.com/user-attachments/assets/66843d46-7e66-40ca-85bd-c34ab48b101f))
 
 [![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react)](https://reactjs.org/)
