@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media (min-width: 768px) {
+  main {
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .sidebar-collapsed main {
+    margin-left: 5rem;
+    /* 20px untuk collapsed sidebar */
+  }
+
+  .sidebar-expanded main {
+    margin-left: 16rem;
+    /* 64px untuk expanded sidebar */
+  }
+}
+
+/* Tambahkan kode CSS berikut ke file index.css Anda */
+
+/* Layout responsif untuk main content berdasarkan status sidebar */
+@media (min-width: 768px) {
+  main {
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .sidebar-collapsed main {
+    margin-left: 5rem;
+    /* 20px untuk collapsed sidebar */
+  }
+
+  .sidebar-expanded main {
+    margin-left: 16rem;
+    /* 64px untuk expanded sidebar */
+  }
+}
+
+/* Pastikan konten tidak terpotong di bawah header */
+main {
+  padding-top: 4rem;
+  /* 16px - tinggi header */
+}
+
+/* Fix untuk device mobile */
+@media (max-width: 767px) {
+  main {
+    margin-left: 0 !important;
+  }
+}
+
+/* Pastikan sidebar scroll independen jika kontennya panjang */
+.sidebar-content {
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+/* Fix untuk z-index dropdown/modal */
+.dropdown-content {
+  z-index: 60;
+  /* Lebih tinggi dari header */
+}
+
+/* Transisi halus untuk semua komponen */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
