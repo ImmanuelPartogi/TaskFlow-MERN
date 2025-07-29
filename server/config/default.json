@@ -1,5 +1,0 @@
-{
-  "mongoURI": "mongodb://localhost:27017/task-management-app",
-  "jwtSecret": "mysecrettoken",
-  "jwtExpiration": "24h"
-}
